@@ -1,0 +1,17 @@
+This is my two-layer, fully-connected network for softmax classification on
+the mnist dataset.
+
+The dataset can be found on Yan Lecun's website: 
+http://yann.lecun.com/exdb/mnist/
+
+The network consists of a fully-connected softplus layer followed by softmax
+output. It uses L2 normalization and uses the Adam optimization method for
+weight updates. I used an unconventional/hybrid form of stochastic gradient
+descent in that my batch size is set to the iteration number. This provides
+fast convergence early in the training and progressively gains similar
+precision benefits to full batch learning. More tests need to be done to 
+determine if this method has any real merit.
+
+This is an independent project for my machine learning lab to practice taking
+multivariate derivatives. The lab was at The University of Texas at Dallas
+lead by James Ryland under Dr. Richard Golden.
